@@ -56,3 +56,7 @@ Firmware modules:
 
 - Texas Instruments, *TLC6C5724-Q1 Automotive 24-Channel, Full Diagnostics, Constant-Current RGB LED Driver*, datasheet
 - Eclipse Mosquitto, Node-RED and Node-RED Dashboard 2.0 documentation
+
+## License
+
+MIT - see [LICENSE](LICENSE). Third-party code (e.g. ST HAL/CMSIS drivers, libraries) keeps its own license.
