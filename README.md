@@ -31,7 +31,8 @@ An ESP32-based test and control unit for the Texas Instruments **TLC6C5724-Q1**,
 |---|---|
 | `firmware/TLC6C5724_Diagnostic_Controller/` | ESP32 Arduino sketch, split by module (see below) |
 | `node-red/flows.json` | Node-RED Dashboard 2 flow (import via *Menu > Import*) |
-| `hardware/` | KiCad schematics of the prototype and the TLC breakout |
+| `hardware/` | KiCad schematics (plus a PDF export) of the prototype, and the TLC breakout schematic and PCB layout |
+| `mosquitto/` | Mosquitto demo config and a Windows launcher that starts Mosquitto and Node-RED and opens the dashboard |
 | `docs/images/` | Architecture, prototype and dashboard figures |
 
 Firmware modules:
@@ -50,7 +51,7 @@ Firmware modules:
 1. Arduino IDE with the **ESP32** board package (board: ESP32 Dev Module).
 2. Libraries: **PubSubClient**, **TFT_eSPI** (configure `User_Setup.h` for the 1.8" 128x160 SPI TFT used).
 3. Copy `Secrets.example.h` to `Secrets.h` and enter your Wi-Fi and broker settings. `Secrets.h` is git-ignored.
-4. On the laptop: run Mosquitto (port 1883) and Node-RED with `@flowfuse/node-red-dashboard`, then import `node-red/flows.json`.
+4. On the laptop: install Mosquitto and Node-RED with `@flowfuse/node-red-dashboard`, import `node-red/flows.json`, then run `mosquitto/TLC6C5724_Demo_Start.bat` to start the broker and Node-RED and open the dashboard.
 
 ## References
 
