@@ -3,7 +3,7 @@ title TLC6C5724 Demo Launcher
 
 echo Starting TLC6C5724 MQTT broker...
 
-start "Mosquitto Demo" "C:\Program Files\mosquitto\mosquitto.exe" -c "C:\Users\user\Desktop\mosquitto-demo.conf" -v
+start "Mosquitto Demo" "C:\Program Files\mosquitto\mosquitto.exe" -c "%~dp0mosquitto-demo.conf" -v
 
 echo.
 echo Starting Node-RED...
