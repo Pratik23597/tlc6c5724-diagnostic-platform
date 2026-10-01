@@ -1,0 +1,11 @@
+# Local credentials - never commit
+Secrets.h
+NetworkConfig.h
+flows_cred.json
+
+# Build / editor leftovers
+*.bak
+*-backups/
+*.kicad_prl
+.history/
+build/

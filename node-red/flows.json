@@ -1,0 +1,2018 @@
+[
+    {
+        "id": "61d58566836e6ea4",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d92ef9b20caf1f59",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b4c2d72b6d2cf73d",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "9c85c166a8d450ad",
+        "type": "ui-theme",
+        "name": "ui-base.label.theme 2",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094ce",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "748d4275f08e05b4",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.30.2"
+        }
+    },
+    {
+        "id": "ac2f80452a47e4ea",
+        "type": "ui-page",
+        "name": "TLC6C5724 Diagnostics",
+        "ui": "b4c2d72b6d2cf73d",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "9c85c166a8d450ad",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "6d5adc785bc9f970",
+        "type": "ui-page",
+        "name": "LED Control",
+        "ui": "b4c2d72b6d2cf73d",
+        "path": "/page2",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "9c85c166a8d450ad",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "09056829baba9684",
+        "type": "ui-group",
+        "name": "Automatic LED Tests",
+        "page": "6d5adc785bc9f970",
+        "width": 6,
+        "height": 5,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "8b2e0e4928d95a0e",
+        "type": "ui-group",
+        "name": "Device overview",
+        "page": "ac2f80452a47e4ea",
+        "width": 6,
+        "height": "4",
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "980611fe20be8689",
+        "type": "ui-group",
+        "name": "Diagnostic Results",
+        "page": "ac2f80452a47e4ea",
+        "width": "6",
+        "height": "8",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "c19afd153bcc26f3",
+        "type": "ui-group",
+        "name": "Diagnostic Controls",
+        "page": "ac2f80452a47e4ea",
+        "width": "6",
+        "height": "4",
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "da4fff9b13a669d6",
+        "type": "ui-group",
+        "name": "Channel Status",
+        "page": "ac2f80452a47e4ea",
+        "width": 6,
+        "height": "8",
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "7dc41af3d3fcd44a",
+        "type": "ui-group",
+        "name": "Channel Control",
+        "page": "6d5adc785bc9f970",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "44532091135704e3",
+        "type": "mqtt in",
+        "z": "61d58566836e6ea4",
+        "name": "",
+        "topic": "tlc6c5724/device01/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "d92ef9b20caf1f59",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 220,
+        "wires": [
+            [
+                "983b9954ecd4ce10",
+                "bb626b1c6313d1ae",
+                "0d4865740ca3aae0",
+                "f1654812de7ac855",
+                "853fffa34b4a3b9c"
+            ]
+        ]
+    },
+    {
+        "id": "983b9954ecd4ce10",
+        "type": "debug",
+        "z": "61d58566836e6ea4",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "bb626b1c6313d1ae",
+        "type": "switch",
+        "z": "61d58566836e6ea4",
+        "name": "Route Overview",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "tlc6c5724/device01/availability",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "tlc6c5724/device01/err",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "tlc6c5724/device01/heartbeat",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 480,
+        "y": 160,
+        "wires": [
+            [
+                "3462fcfa1c083276",
+                "589e622c77165cfd"
+            ],
+            [
+                "a5d5acf33e1aa189"
+            ],
+            [
+                "510274b5d6561005"
+            ]
+        ]
+    },
+    {
+        "id": "a15f187c70870311",
+        "type": "ui-text",
+        "z": "61d58566836e6ea4",
+        "group": "8b2e0e4928d95a0e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "DEVICE",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 980,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "3462fcfa1c083276",
+        "type": "debug",
+        "z": "61d58566836e6ea4",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "a5d5acf33e1aa189",
+        "type": "function",
+        "z": "61d58566836e6ea4",
+        "name": "Format ERR",
+        "func": "if (msg.payload.active === true) {\n    msg.payload =\n        '<span style=\"color:#c62828;font-weight:700;\">FAULT ACTIVE</span>';\n} else {\n    msg.payload =\n        '<span style=\"color:#2e7d32;font-weight:700;\">OK</span>';\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 260,
+        "wires": [
+            [
+                "195f1e8d84bb6e62"
+            ]
+        ]
+    },
+    {
+        "id": "195f1e8d84bb6e62",
+        "type": "ui-text",
+        "z": "61d58566836e6ea4",
+        "group": "8b2e0e4928d95a0e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "ERR",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 930,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "510274b5d6561005",
+        "type": "function",
+        "z": "61d58566836e6ea4",
+        "name": "format Heartbeat",
+        "func": "let p = msg.payload;\n\n// Output 1: IP address\nlet ipMsg = {\n    payload: p.ip\n};\n\n// Output 2: Wi-Fi RSSI\nlet rssiMsg = {\n    payload: p.rssi_dbm + \" dBm\"\n};\n\n// Output 3: Uptime\nlet totalSeconds = Math.floor(p.uptime_ms / 1000);\n\nlet hours = Math.floor(totalSeconds / 3600);\nlet minutes = Math.floor((totalSeconds % 3600) / 60);\nlet seconds = totalSeconds % 60;\n\nlet uptime =\n    String(hours).padStart(2, \"0\") + \":\" +\n    String(minutes).padStart(2, \"0\") + \":\" +\n    String(seconds).padStart(2, \"0\");\n\nlet uptimeMsg = {\n    payload: uptime\n};\n\nreturn [\n    ipMsg,\n    rssiMsg,\n    uptimeMsg\n];",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 340,
+        "wires": [
+            [
+                "283412d92e0a60c3"
+            ],
+            [
+                "1736b310f2cdf089"
+            ],
+            [
+                "ac64a5b2ec7dbb51"
+            ]
+        ]
+    },
+    {
+        "id": "283412d92e0a60c3",
+        "type": "ui-text",
+        "z": "61d58566836e6ea4",
+        "group": "8b2e0e4928d95a0e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "IP ADDRESS",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 960,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "1736b310f2cdf089",
+        "type": "ui-text",
+        "z": "61d58566836e6ea4",
+        "group": "8b2e0e4928d95a0e",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "WIFI RSSI",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 950,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "ac64a5b2ec7dbb51",
+        "type": "ui-text",
+        "z": "61d58566836e6ea4",
+        "group": "8b2e0e4928d95a0e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "UPTIME",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 940,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "0d4865740ca3aae0",
+        "type": "switch",
+        "z": "61d58566836e6ea4",
+        "name": "Route Diagnostics",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "tlc6c5724/device01/channel-scan",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "tlc6c5724/device01/aps",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "tlc6c5724/device01/device-status",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "tlc6c5724/device01/lod-lsd-self-test",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "tlc6c5724/device01/neg-gclk",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "tlc6c5724/device01/error-clear",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 6,
+        "x": 450,
+        "y": 680,
+        "wires": [
+            [
+                "963739300bca2115"
+            ],
+            [
+                "fbc69c81237c51ec"
+            ],
+            [
+                "def19609e937dd8e"
+            ],
+            [
+                "21f2587595ca6b96"
+            ],
+            [
+                "b83371838c6448f2"
+            ],
+            [
+                "8a62d7ec717dc8d0"
+            ]
+        ]
+    },
+    {
+        "id": "def19609e937dd8e",
+        "type": "function",
+        "z": "61d58566836e6ea4",
+        "name": "Format Device status",
+        "func": "let p = msg.payload;\n\nfunction green(text) {\n    return {\n        payload:\n            '<span style=\"color:#2e7d32;font-weight:700;\">' +\n            text +\n            '</span>'\n    };\n}\n\nfunction red(text) {\n    return {\n        payload:\n            '<span style=\"color:#c62828;font-weight:700;\">' +\n            text +\n            '</span>'\n    };\n}\n\nfunction amber(text) {\n    return {\n        payload:\n            '<span style=\"color:#f9a825;font-weight:700;\">' +\n            text +\n            '</span>'\n    };\n}\n\n// Overall status\nlet resultText = String(p.result)\n    .replaceAll(\"_\", \" \")\n    .toUpperCase();\n\nlet resultMsg =\n    p.result === \"ok\"\n        ? green(resultText)\n        : red(resultText);\n\n// Thermal shutdown\nlet tefMsg =\n    p.tef\n        ? red(\"ACTIVE\")\n        : green(\"OK\");\n\n// Pre-thermal warning\nlet ptwMsg =\n    p.ptw\n        ? amber(\"ACTIVE\")\n        : green(\"OK\");\n\n// IREF short\nlet isfMsg =\n    p.isf\n        ? red(\"ACTIVE\")\n        : green(\"OK\");\n\n// IREF open\nlet iofMsg =\n    p.iof\n        ? red(\"ACTIVE\")\n        : green(\"OK\");\n\nreturn [\n    resultMsg,\n    tefMsg,\n    ptwMsg,\n    iofMsg,\n    isfMsg\n];",
+        "outputs": 5,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 740,
+        "wires": [
+            [
+                "c61e156f10cd0e2f"
+            ],
+            [
+                "0c8526797caca4bd"
+            ],
+            [
+                "4df2591c925e0376"
+            ],
+            [
+                "33cafda85678ebb2"
+            ],
+            [
+                "5ec6ff908637387e"
+            ]
+        ]
+    },
+    {
+        "id": "c61e156f10cd0e2f",
+        "type": "ui-text",
+        "z": "61d58566836e6ea4",
+        "group": "980611fe20be8689",
+        "order": 1,
+        "width": null,
+        "height": null,
+        "name": "",
+        "label": "DEVICE STATUS",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1190,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "0c8526797caca4bd",
+        "type": "ui-text",
+        "z": "61d58566836e6ea4",
+        "group": "980611fe20be8689",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "THERMAL ERROR",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1190,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "4df2591c925e0376",
+        "type": "ui-text",
+        "z": "61d58566836e6ea4",
+        "group": "980611fe20be8689",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "THERMAL WARNING",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1200,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "33cafda85678ebb2",
+        "type": "ui-text",
+        "z": "61d58566836e6ea4",
+        "group": "980611fe20be8689",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "IREF OPEN",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1168.9691162109375,
+        "y": 921.2959594726562,
+        "wires": []
+    },
+    {
+        "id": "5ec6ff908637387e",
+        "type": "ui-text",
+        "z": "61d58566836e6ea4",
+        "group": "980611fe20be8689",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "IREF SHORT",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1180,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "fbc69c81237c51ec",
+        "type": "function",
+        "z": "61d58566836e6ea4",
+        "name": "Format APS",
+        "func": "let p = msg.payload;\n\nlet pass =\n    String(p.result).toLowerCase() === \"pass\";\n\nlet resultText =\n    String(p.result).toUpperCase();\n\nlet resultMsg = {\n    payload:\n        '<span style=\"color:' +\n        (pass ? \"#2e7d32\" : \"#c62828\") +\n        ';font-weight:700;\">' +\n        resultText +\n        '</span>'\n};\n\nlet affected =\n    (p.outputs && p.outputs.length > 0)\n        ? p.outputs.join(\", \")\n        : \"NONE\";\n\nlet outputsMsg = {\n    payload:\n        '<span style=\"color:' +\n        (affected === \"NONE\" ? \"#2e7d32\" : \"#c62828\") +\n        ';font-weight:700;\">' +\n        affected +\n        '</span>'\n};\n\nreturn [\n    resultMsg,\n    outputsMsg\n];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 600,
+        "wires": [
+            [
+                "cd413a1b907bea6f"
+            ],
+            [
+                "e91e8af9fb5df890"
+            ]
+        ]
+    },
+    {
+        "id": "cd413a1b907bea6f",
+        "type": "ui-text",
+        "z": "61d58566836e6ea4",
+        "group": "980611fe20be8689",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "APS TEST",
+        "label": "APS TEST",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1150,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "e91e8af9fb5df890",
+        "type": "ui-text",
+        "z": "61d58566836e6ea4",
+        "group": "980611fe20be8689",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "APS RESULT",
+        "label": "APS RESULT",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1180,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "21f2587595ca6b96",
+        "type": "function",
+        "z": "61d58566836e6ea4",
+        "name": "Format LOD LSD",
+        "func": "let result =\n    String(msg.payload.result).toUpperCase();\n\nlet pass = result === \"PASS\";\n\nmsg.payload =\n    '<span style=\"color:' +\n    (pass ? \"#2e7d32\" : \"#c62828\") +\n    ';font-weight:700;\">' +\n    result +\n    '</span>';\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 880,
+        "wires": [
+            [
+                "996f1c1662eefe4f"
+            ]
+        ]
+    },
+    {
+        "id": "996f1c1662eefe4f",
+        "type": "ui-text",
+        "z": "61d58566836e6ea4",
+        "group": "980611fe20be8689",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "LOD/LSD SELF TEST",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1040,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "b83371838c6448f2",
+        "type": "function",
+        "z": "61d58566836e6ea4",
+        "name": "Format NEG GCLK",
+        "func": "let result =\n    String(msg.payload.result).toUpperCase();\n\nlet pass = result === \"PASS\";\n\nmsg.payload =\n    '<span style=\"color:' +\n    (pass ? \"#2e7d32\" : \"#c62828\") +\n    ';font-weight:700;\">' +\n    result +\n    '</span>';\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 980,
+        "wires": [
+            [
+                "c77d5c688abd52bc"
+            ]
+        ]
+    },
+    {
+        "id": "c77d5c688abd52bc",
+        "type": "ui-text",
+        "z": "61d58566836e6ea4",
+        "group": "980611fe20be8689",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "NEG/GCLK TEST",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 830,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "8a62d7ec717dc8d0",
+        "type": "function",
+        "z": "61d58566836e6ea4",
+        "name": "function Error CLEAR",
+        "func": "let result =\n    String(msg.payload.result)\n        .replaceAll(\"_\", \" \")\n        .toUpperCase();\n\nlet cleared = result === \"CLEARED\";\n\nmsg.payload =\n    '<span style=\"color:' +\n    (cleared ? \"#2e7d32\" : \"#c62828\") +\n    ';font-weight:700;\">' +\n    result +\n    '</span>';\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 1420,
+        "wires": [
+            [
+                "50b0554d932eb03b"
+            ]
+        ]
+    },
+    {
+        "id": "50b0554d932eb03b",
+        "type": "ui-text",
+        "z": "61d58566836e6ea4",
+        "group": "980611fe20be8689",
+        "order": 10,
+        "width": 6,
+        "height": 0,
+        "name": "",
+        "label": "ERROR CLEAR",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 960,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "3ce04ae23ecedb50",
+        "type": "ui-button",
+        "z": "61d58566836e6ea4",
+        "group": "c19afd153bcc26f3",
+        "name": "DEVICE STATUS",
+        "label": "DEVICE STATUS",
+        "order": 6,
+        "width": "3",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "device_status",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1210,
+        "y": 1380,
+        "wires": [
+            [
+                "b2a4106f5f4a919c"
+            ]
+        ]
+    },
+    {
+        "id": "b2a4106f5f4a919c",
+        "type": "mqtt out",
+        "z": "61d58566836e6ea4",
+        "name": "",
+        "topic": "tlc6c5724/device01/command",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d92ef9b20caf1f59",
+        "x": 1530,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "6bbb7877bad108d7",
+        "type": "ui-button",
+        "z": "61d58566836e6ea4",
+        "group": "c19afd153bcc26f3",
+        "name": "SCAN CHANNELS",
+        "label": "SCAN CHANNELS",
+        "order": 5,
+        "width": "3",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "channel_scan",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1210,
+        "y": 1440,
+        "wires": [
+            [
+                "b2a4106f5f4a919c"
+            ]
+        ]
+    },
+    {
+        "id": "54c0cfc68f9e4fab",
+        "type": "ui-button",
+        "z": "61d58566836e6ea4",
+        "group": "c19afd153bcc26f3",
+        "name": "APS TEST",
+        "label": "APS TEST",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "aps",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1190,
+        "y": 1500,
+        "wires": [
+            [
+                "b2a4106f5f4a919c"
+            ]
+        ]
+    },
+    {
+        "id": "250ec223afafdb20",
+        "type": "ui-button",
+        "z": "61d58566836e6ea4",
+        "group": "c19afd153bcc26f3",
+        "name": "LOD/LSD TEST",
+        "label": "LOD/LSD TEST",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "lod_lsd",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1200,
+        "y": 1560,
+        "wires": [
+            [
+                "b2a4106f5f4a919c"
+            ]
+        ]
+    },
+    {
+        "id": "eb2148dea114ad42",
+        "type": "ui-button",
+        "z": "61d58566836e6ea4",
+        "group": "c19afd153bcc26f3",
+        "name": "NEG/GCLK TEST",
+        "label": "NEG/GCLK TEST",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "neg_gclk",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1210,
+        "y": 1620,
+        "wires": [
+            [
+                "b2a4106f5f4a919c"
+            ]
+        ]
+    },
+    {
+        "id": "bb2f92b28fc32caa",
+        "type": "ui-button",
+        "z": "61d58566836e6ea4",
+        "group": "c19afd153bcc26f3",
+        "name": "CLEAR ERRORS",
+        "label": "CLEAR ERRORS",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "clear_errors",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1210,
+        "y": 1680,
+        "wires": [
+            [
+                "b2a4106f5f4a919c"
+            ]
+        ]
+    },
+    {
+        "id": "589e622c77165cfd",
+        "type": "function",
+        "z": "61d58566836e6ea4",
+        "name": "function 1",
+        "func": "let online =\n    String(msg.payload).toLowerCase() === \"online\";\n\nif (online) {\n    msg.payload =\n        '<span style=\"color:#2e7d32;font-weight:700;\">ONLINE</span>';\n} else {\n    msg.payload =\n        '<span style=\"color:#c62828;font-weight:700;\">OFFLINE</span>';\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 80,
+        "wires": [
+            [
+                "a15f187c70870311"
+            ]
+        ]
+    },
+    {
+        "id": "963739300bca2115",
+        "type": "function",
+        "z": "61d58566836e6ea4",
+        "name": "Build 24 Channel Map",
+        "func": "let incoming = msg.payload.channels || {};\n\nlet names = [\n    \"R0\",\"G0\",\"B0\",\n    \"R1\",\"G1\",\"B1\",\n    \"R2\",\"G2\",\"B2\",\n    \"R3\",\"G3\",\"B3\",\n    \"R4\",\"G4\",\"B4\",\n    \"R5\",\"G5\",\"B5\",\n    \"R6\",\"G6\",\"B6\",\n    \"R7\",\"G7\",\"B7\"\n];\n\nlet result = {};\n\nfor (let name of names) {\n    result[name] = incoming[name] || \"nc\";\n}\n\nmsg.payload = result;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1460,
+        "y": 840,
+        "wires": [
+            [
+                "f3ca0a39a41e6c16"
+            ]
+        ]
+    },
+    {
+        "id": "f3ca0a39a41e6c16",
+        "type": "ui-template",
+        "z": "61d58566836e6ea4",
+        "group": "da4fff9b13a669d6",
+        "page": "",
+        "ui": "",
+        "name": "",
+        "order": 1,
+        "width": "6",
+        "height": "8",
+        "head": "",
+        "format": "<template>\n    <div class=\"tlc-grid\">\n        <div\n            v-for=\"name in channelNames\"\n            :key=\"name\"\n            class=\"tlc-channel\"\n        >\n            <div class=\"tlc-name\">\n                {{ name }}\n            </div>\n\n            <div\n                class=\"tlc-state\"\n                :class=\"statusClass(msg?.payload?.[name])\"\n            >\n                {{ displayStatus(msg?.payload?.[name]) }}\n            </div>\n        </div>\n    </div>\n</template>\n\n<script>\nexport default {\n    data() {\n        return {\n            channelNames: [\n                \"R0\",\"G0\",\"B0\",\n                \"R1\",\"G1\",\"B1\",\n                \"R2\",\"G2\",\"B2\",\n                \"R3\",\"G3\",\"B3\",\n                \"R4\",\"G4\",\"B4\",\n                \"R5\",\"G5\",\"B5\",\n                \"R6\",\"G6\",\"B6\",\n                \"R7\",\"G7\",\"B7\"\n            ]\n        }\n    },\n\n    methods: {\n        displayStatus(value) {\n            if (!value) return \"NC\";\n\n            return String(value)\n                .replaceAll(\"_\", \" \")\n                .toUpperCase();\n        },\n\n        statusClass(value) {\n            value = String(value || \"nc\").toLowerCase();\n\n            if (value === \"ok\")\n                return \"status-ok\";\n\n            if (\n                value === \"open\" ||\n                value === \"short\" ||\n                value === \"out_gnd\"\n            )\n                return \"status-fault\";\n\n            if (value === \"nc\")\n                return \"status-nc\";\n\n            return \"status-warning\";\n        }\n    }\n}\n</script>\n\n<style>\n.tlc-grid {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 4px;\n    width: 100%;\n}\n\n.tlc-channel {\n    border: 1px solid #d0d0d0;\n    border-radius: 5px;\n    padding: 3px 6px;\n    text-align: center;\n    background: white;\n}\n\n.tlc-name {\n    font-size: 12px;\n    font-weight: 700;\n    margin-bottom: 2px;\n}\n\n.tlc-state {\n    font-size: 12px;\n    font-weight: 700;\n    padding: 2px;\n    border-radius: 4px;\n}\n\n.status-ok {\n    color: #2e7d32;\n    background: #e8f5e9;\n}\n\n.status-fault {\n    color: #c62828;\n    background: #ffebee;\n}\n\n.status-warning {\n    color: #f57f17;\n    background: #fff8e1;\n}\n\n.status-nc {\n    color: #757575;\n    background: #eeeeee;\n}\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1740,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d5d1d715b7f37cb",
+        "type": "ui-dropdown",
+        "z": "61d58566836e6ea4",
+        "group": "7dc41af3d3fcd44a",
+        "name": "",
+        "label": "Channel",
+        "tooltip": "",
+        "order": 1,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "R0",
+                "value": "R0",
+                "type": "str"
+            },
+            {
+                "label": "G0",
+                "value": "G0",
+                "type": "str"
+            },
+            {
+                "label": "B0",
+                "value": "B0",
+                "type": "str"
+            },
+            {
+                "label": "R1",
+                "value": "R1",
+                "type": "str"
+            },
+            {
+                "label": "G1",
+                "value": "G1",
+                "type": "str"
+            },
+            {
+                "label": "B1",
+                "value": "B1",
+                "type": "str"
+            },
+            {
+                "label": "R2",
+                "value": "R2",
+                "type": "str"
+            },
+            {
+                "label": "G2",
+                "value": "G2",
+                "type": "str"
+            },
+            {
+                "label": "B2",
+                "value": "B2",
+                "type": "str"
+            },
+            {
+                "label": "R3",
+                "value": "R3",
+                "type": "str"
+            },
+            {
+                "label": "G3",
+                "value": "G3",
+                "type": "str"
+            },
+            {
+                "label": "B3",
+                "value": "B3",
+                "type": "str"
+            },
+            {
+                "label": "R4",
+                "value": "R4",
+                "type": "str"
+            },
+            {
+                "label": "G4",
+                "value": "G4",
+                "type": "str"
+            },
+            {
+                "label": "B4",
+                "value": "B4",
+                "type": "str"
+            },
+            {
+                "label": "R5",
+                "value": "R5",
+                "type": "str"
+            },
+            {
+                "label": "G5",
+                "value": "G5",
+                "type": "str"
+            },
+            {
+                "label": "B5",
+                "value": "B5",
+                "type": "str"
+            },
+            {
+                "label": "R6",
+                "value": "R6",
+                "type": "str"
+            },
+            {
+                "label": "G6",
+                "value": "G6",
+                "type": "str"
+            },
+            {
+                "label": "B6",
+                "value": "B6",
+                "type": "str"
+            },
+            {
+                "label": "R7",
+                "value": "R7",
+                "type": "str"
+            },
+            {
+                "label": "G7",
+                "value": "G7",
+                "type": "str"
+            },
+            {
+                "label": "B7",
+                "value": "B7",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": true,
+        "msgTrigger": "onChange",
+        "x": 1120,
+        "y": 1800,
+        "wires": [
+            [
+                "a4374efd694536d1"
+            ]
+        ]
+    },
+    {
+        "id": "a4374efd694536d1",
+        "type": "function",
+        "z": "61d58566836e6ea4",
+        "name": "Store Selected Channel",
+        "func": "let channel = String(msg.payload);\nflow.set(\"selectedChannel\", channel);\n\nlet states = flow.get(\"channelStates\");\n\nif (!states) {\n    states = {};\n\n    let connected = [\n        \"R0\",\"G0\",\"B0\",\n        \"R1\",\"G1\",\"B1\",\n        \"R2\",\"G2\",\"B2\"\n    ];\n\n    let all = [\n        \"R0\",\"G0\",\"B0\",\n        \"R1\",\"G1\",\"B1\",\n        \"R2\",\"G2\",\"B2\",\n        \"R3\",\"G3\",\"B3\",\n        \"R4\",\"G4\",\"B4\",\n        \"R5\",\"G5\",\"B5\",\n        \"R6\",\"G6\",\"B6\",\n        \"R7\",\"G7\",\"B7\"\n    ];\n\n    for (let ch of all) {\n        states[ch] = {\n            enabled: connected.includes(ch),\n            gs: 4095,\n            dc: 127\n        };\n    }\n\n    flow.set(\"channelStates\", states);\n}\n\nlet state = states[channel];\n\nreturn [\n    { payload: Boolean(state.enabled) },\n    { payload: Number(state.gs) },\n    { payload: Number(state.dc) }\n];",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1430,
+        "y": 1840,
+        "wires": [
+            [
+                "8a96f288191b9e58"
+            ],
+            [
+                "95bca04a6970a954"
+            ],
+            [
+                "709e78ea7b71b806"
+            ]
+        ]
+    },
+    {
+        "id": "95bca04a6970a954",
+        "type": "ui-slider",
+        "z": "61d58566836e6ea4",
+        "group": "7dc41af3d3fcd44a",
+        "name": "",
+        "label": "Greyscale",
+        "tooltip": "",
+        "order": 3,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "thumbLabel": "true",
+        "showTicks": "always",
+        "min": 0,
+        "max": "4095",
+        "step": "128",
+        "className": "",
+        "iconPrepend": "",
+        "iconAppend": "",
+        "color": "blue",
+        "colorTrack": "red",
+        "colorThumb": "",
+        "showTextField": false,
+        "x": 2020,
+        "y": 960,
+        "wires": [
+            [
+                "510b41550c7a409c"
+            ]
+        ]
+    },
+    {
+        "id": "510b41550c7a409c",
+        "type": "function",
+        "z": "61d58566836e6ea4",
+        "name": "Store GS Value",
+        "func": "let channel = flow.get(\"selectedChannel\") || \"R0\";\n\nlet gs = Math.round(Number(msg.payload));\ngs = Math.max(0, Math.min(4095, gs));\n\nflow.set(\"selectedGS\", gs);\n\nmsg.payload = \"gs:\" + channel + \":\" + gs;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2200,
+        "y": 960,
+        "wires": [
+            [
+                "48f0ed620530fb9d"
+            ]
+        ]
+    },
+    {
+        "id": "607fd0581893b6cd",
+        "type": "debug",
+        "z": "61d58566836e6ea4",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2220,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "48f0ed620530fb9d",
+        "type": "delay",
+        "z": "61d58566836e6ea4",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": ".001",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2470,
+        "y": 980,
+        "wires": [
+            [
+                "607fd0581893b6cd",
+                "b2a4106f5f4a919c"
+            ]
+        ]
+    },
+    {
+        "id": "709e78ea7b71b806",
+        "type": "ui-slider",
+        "z": "61d58566836e6ea4",
+        "group": "7dc41af3d3fcd44a",
+        "name": "Dot Correction",
+        "label": "Dot Correction",
+        "tooltip": "",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "thumbLabel": "true",
+        "showTicks": "always",
+        "min": 0,
+        "max": "127",
+        "step": "8",
+        "className": "",
+        "iconPrepend": "",
+        "iconAppend": "",
+        "color": "",
+        "colorTrack": "",
+        "colorThumb": "",
+        "showTextField": false,
+        "x": 2020,
+        "y": 860,
+        "wires": [
+            [
+                "f93ee713da7b7792"
+            ]
+        ]
+    },
+    {
+        "id": "f93ee713da7b7792",
+        "type": "function",
+        "z": "61d58566836e6ea4",
+        "name": "Build DC",
+        "func": "let channel = flow.get(\"selectedChannel\") || \"R0\";\n\nlet dc = Math.round(Number(msg.payload));\ndc = Math.max(0, Math.min(127, dc));\n\nmsg.payload = \"dc:\" + channel + \":\" + dc;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2260,
+        "y": 860,
+        "wires": [
+            [
+                "48f0ed620530fb9d"
+            ]
+        ]
+    },
+    {
+        "id": "8a96f288191b9e58",
+        "type": "ui-switch",
+        "z": "61d58566836e6ea4",
+        "name": "",
+        "label": "Channel Enabled",
+        "group": "7dc41af3d3fcd44a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 1530,
+        "y": 1620,
+        "wires": [
+            [
+                "ebcdc15f6542f407"
+            ]
+        ]
+    },
+    {
+        "id": "ebcdc15f6542f407",
+        "type": "function",
+        "z": "61d58566836e6ea4",
+        "name": "Build Enable Command",
+        "func": "let channel = flow.get(\"selectedChannel\") || \"R0\";\n\nlet enabled = Number(msg.payload) ? 1 : 0;\n\nlet states = flow.get(\"channelStates\") || {};\n\nif (!states[channel]) {\n    states[channel] = {\n        enabled: true,\n        gs: 4095,\n        dc: 127\n    };\n}\n\nstates[channel].enabled = Boolean(enabled);\n\nflow.set(\"channelStates\", states);\n\nmsg.payload =\n    \"enable:\" + channel + \":\" + enabled;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1830,
+        "y": 1620,
+        "wires": [
+            [
+                "3201dc71ee47138b",
+                "b2a4106f5f4a919c"
+            ]
+        ]
+    },
+    {
+        "id": "3201dc71ee47138b",
+        "type": "debug",
+        "z": "61d58566836e6ea4",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2040,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "f1654812de7ac855",
+        "type": "function",
+        "z": "61d58566836e6ea4",
+        "name": "Sync channel State",
+        "func": "if (msg.topic !== \"tlc6c5724/device01/channel-control\") {\n    return null;\n}\n\nlet p = msg.payload;\n\n// Just in case MQTT gives us a JSON string\nif (typeof p === \"string\") {\n    try {\n        p = JSON.parse(p);\n    } catch (e) {\n        return null;\n    }\n}\n\nlet selected =\n    flow.get(\"selectedChannel\") || \"R0\";\n\n// Store actual state reported by ESP32\nlet states =\n    flow.get(\"channelStates\") || {};\n\nif (!states[p.channel]) {\n    states[p.channel] = {\n        enabled: true,\n        gs: 4095,\n        dc: 127\n    };\n}\n\nstates[p.channel].enabled =\n    Boolean(p.enabled);\n\nstates[p.channel].gs = Number(p.gs);\nstates[p.channel].dc = Number(p.dc);\n\nflow.set(\"channelStates\", states);\n\n// Only update the switch if this is\n// the channel currently selected on screen\nif (p.channel !== selected) {\n    return null;\n}\n\nif (p.channel !== selected) {\n    return null;\n}\n\nreturn [\n    { payload: Boolean(p.enabled) },\n    { payload: Number(p.gs) },\n    { payload: Number(p.dc) }\n];",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 1240,
+        "wires": [
+            [
+                "8a96f288191b9e58"
+            ],
+            [
+                "95bca04a6970a954"
+            ],
+            [
+                "709e78ea7b71b806"
+            ]
+        ]
+    },
+    {
+        "id": "853fffa34b4a3b9c",
+        "type": "function",
+        "z": "61d58566836e6ea4",
+        "name": "Format Automatic Test Status",
+        "func": "if (msg.topic !== \"tlc6c5724/device01/automatic-test\") {\n    return null;\n}\n\nlet p = msg.payload;\n\n// Handle either parsed JSON or a JSON string.\nif (typeof p === \"string\") {\n    try {\n        p = JSON.parse(p);\n    } catch (e) {\n        return null;\n    }\n}\n\nconst labels = {\n    rgb_cycle: \"RGB COLOUR CYCLE\",\n    rgb_phase_rotation: \"RGB PHASE ROTATION\",\n    led_chase: \"RGB SEQUENTIAL CHASE\",\n    brightness_sweep: \"BRIGHTNESS SWEEP\",\n    all_white: \"ALL WHITE\",\n    all_off: \"ALL OFF\",\n    none: \"NONE\"\n};\n\nconst running =\n    String(p.state || \"\").toLowerCase() === \"running\";\n\nconst testName =\n    labels[p.test] ||\n    String(p.test || \"none\")\n        .replaceAll(\"_\", \" \")\n        .toUpperCase();\n\nlet modeMsg = {\n    payload: running\n        ? '<span style=\"color:#1565c0;font-weight:700;\">' +\n          testName +\n          '</span>'\n        : '<span style=\"color:#616161;font-weight:700;\">IDLE</span>'\n};\n\nlet stateMsg = {\n    payload: running\n        ? '<span style=\"color:#2e7d32;font-weight:700;\">RUNNING</span>'\n        : '<span style=\"color:#616161;font-weight:700;\">STOPPED</span>'\n};\n\nreturn [modeMsg, stateMsg];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 1900,
+        "wires": [
+            [
+                "bf55da40e130c035"
+            ],
+            [
+                "46b471c08b390af8"
+            ]
+        ]
+    },
+    {
+        "id": "bf55da40e130c035",
+        "type": "ui-text",
+        "z": "61d58566836e6ea4",
+        "group": "09056829baba9684",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "name": "Automatic Test Mode",
+        "label": "ACTIVE MODE",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 840,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "46b471c08b390af8",
+        "type": "ui-text",
+        "z": "61d58566836e6ea4",
+        "group": "09056829baba9684",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "name": "Automatic Test State",
+        "label": "STATE",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 840,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "af0318162e20c877",
+        "type": "ui-button",
+        "z": "61d58566836e6ea4",
+        "group": "09056829baba9684",
+        "name": "RGB Colour Cycle",
+        "label": "RGB Colour Cycle",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "rgb_cycle",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1230,
+        "y": 1840,
+        "wires": [
+            [
+                "b2a4106f5f4a919c"
+            ]
+        ]
+    },
+    {
+        "id": "cc179911434bec8b",
+        "type": "ui-button",
+        "z": "61d58566836e6ea4",
+        "group": "09056829baba9684",
+        "name": "RGB Phase Rotation",
+        "label": "RGB Phase Rotation",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "rgb_phase_rotation",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1230,
+        "y": 1895,
+        "wires": [
+            [
+                "b2a4106f5f4a919c"
+            ]
+        ]
+    },
+    {
+        "id": "5f0ad10b0029b462",
+        "type": "ui-button",
+        "z": "61d58566836e6ea4",
+        "group": "09056829baba9684",
+        "name": "RGB Sequential Chase",
+        "label": "RGB Sequential Chase",
+        "order": 5,
+        "width": "3",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "led_chase",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1230,
+        "y": 1950,
+        "wires": [
+            [
+                "b2a4106f5f4a919c"
+            ]
+        ]
+    },
+    {
+        "id": "eb22b8a95674c287",
+        "type": "ui-button",
+        "z": "61d58566836e6ea4",
+        "group": "09056829baba9684",
+        "name": "Brightness Sweep",
+        "label": "Brightness Sweep",
+        "order": 6,
+        "width": "3",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "brightness_sweep",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1230,
+        "y": 2005,
+        "wires": [
+            [
+                "b2a4106f5f4a919c"
+            ]
+        ]
+    },
+    {
+        "id": "01247fb0d7de0539",
+        "type": "ui-button",
+        "z": "61d58566836e6ea4",
+        "group": "09056829baba9684",
+        "name": "All White",
+        "label": "All White",
+        "order": 7,
+        "width": "3",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "all_white",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1230,
+        "y": 2060,
+        "wires": [
+            [
+                "b2a4106f5f4a919c"
+            ]
+        ]
+    },
+    {
+        "id": "334b42e12bc983da",
+        "type": "ui-button",
+        "z": "61d58566836e6ea4",
+        "group": "09056829baba9684",
+        "name": "All Off",
+        "label": "All Off",
+        "order": 8,
+        "width": "3",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "all_off",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1230,
+        "y": 2115,
+        "wires": [
+            [
+                "b2a4106f5f4a919c"
+            ]
+        ]
+    },
+    {
+        "id": "1021927fd31b3a72",
+        "type": "ui-button",
+        "z": "61d58566836e6ea4",
+        "group": "09056829baba9684",
+        "name": "STOP TEST",
+        "label": "STOP TEST",
+        "order": 9,
+        "width": "6",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "stop_test",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "#c62828",
+        "textColor": "#ffffff",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1230,
+        "y": 2170,
+        "wires": [
+            [
+                "b2a4106f5f4a919c"
+            ]
+        ]
+    }
+]
