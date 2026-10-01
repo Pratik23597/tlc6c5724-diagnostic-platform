@@ -25,6 +25,11 @@ An ESP32-based test and control unit for the Texas Instruments **TLC6C5724-Q1**,
 
 ![LED control page](docs/images/dashboard-led-control.png)
 
+## Reports
+
+- [Project report](reports/Project_Report.pdf) - design, implementation and results
+- [Diagnostic validation report](reports/Diagnostic_Validation_Report.pdf) - test method, fault-injection steps and recorded results for every diagnostic
+
 ## Repository layout
 
 | Path | Contents |
@@ -34,6 +39,7 @@ An ESP32-based test and control unit for the Texas Instruments **TLC6C5724-Q1**,
 | `hardware/` | KiCad schematics (plus a PDF export) of the prototype, and the TLC breakout schematic and PCB layout |
 | `mosquitto/` | Mosquitto demo config and a Windows launcher that starts Mosquitto and Node-RED and opens the dashboard |
 | `docs/images/` | Architecture, prototype and dashboard figures |
+| `reports/` | Project report (paper) and diagnostic validation report with test procedures and results |
 
 Firmware modules:
 
